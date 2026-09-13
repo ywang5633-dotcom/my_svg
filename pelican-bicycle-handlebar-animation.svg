@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1200 700"
+     width="1200"
+     height="700"
+     role="img"
+     aria-labelledby="title description">
+  <title id="title">鹈鹕双翼扶把骑自行车动画</title>
+  <desc id="description">一只戴蓝色头盔的鹈鹕沿海边公路骑自行车，两只翅膀分别搭在自行车把手两端。</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#82cbd2"/>
+      <stop offset="1" stop-color="#d9f1e8"/>
+    </linearGradient>
+
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f9ea5"/>
+      <stop offset="1" stop-color="#167081"/>
+    </linearGradient>
+
+    <linearGradient id="beak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb52e"/>
+      <stop offset="1" stop-color="#f06d2f"/>
+    </linearGradient>
+
+    <linearGradient id="pouch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff9a43"/>
+      <stop offset="1" stop-color="#ef5d50"/>
+    </linearGradient>
+
+    <linearGradient id="framePaint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a9b9c"/>
+      <stop offset="1" stop-color="#155a76"/>
+    </linearGradient>
+
+    <!-- 车轮绘制在局部坐标原点，左右轮可以复用同一套结构。 -->
+    <g id="wheelGraphic">
+      <circle r="116" fill="#f7f2df" stroke="#1e2831" stroke-width="18"/>
+      <circle r="104" fill="none" stroke="#b7c4c8" stroke-width="5"/>
+      <g fill="none" stroke="#91a2a8" stroke-width="3">
+        <path d="M-102 0H102"/>
+        <path d="M0-102V102"/>
+        <path d="M-72-72L72 72"/>
+        <path d="M72-72L-72 72"/>
+        <path d="M-94-39L94 39"/>
+        <path d="M39-94L-39 94"/>
+        <path d="M94-39L-94 39"/>
+        <path d="M-39-94L39 94"/>
+      </g>
+      <circle r="13" fill="#21303a" stroke="#eef2eb" stroke-width="4"/>
+      <circle cy="-98" r="8" fill="#ffb52e" stroke="#713d24" stroke-width="3"/>
+      <path d="M-24-111A116 116 0 0 1 24-111" fill="none" stroke="#41505a" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <clipPath id="seaClip">
+      <path d="M0 366C170 326 315 351 452 330C624 303 794 320 1200 282V510H0Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <circle cx="1030" cy="104" r="54" fill="#ffd56a" opacity="0.92"/>
+
+  <g opacity="0.92">
+    <g>
+      <path d="M-170 126C-150 86-93 82-68 116C-35 88 26 104 33 145H-170Z" fill="#f7f4df"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="1450 0" dur="28s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <path d="M-350 205C-324 155-260 160-241 196C-203 157-130 173-121 220H-350Z" fill="#ffffff" opacity="0.74"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="1680 0" dur="38s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <path d="M0 366C170 326 315 351 452 330C624 303 794 320 1200 282V510H0Z" fill="url(#sea)"/>
+
+  <!-- 海浪循环平移，营造自行车向前行进的视差。 -->
+  <g clip-path="url(#seaClip)" fill="none" stroke="#a9e5dc" stroke-width="8" stroke-linecap="round" opacity="0.68">
+    <g>
+      <path d="M-300 370Q-230 340-160 370T-20 370T120 370T260 370T400 370T540 370T680 370T820 370T960 370T1100 370T1240 370T1380 370"/>
+      <path d="M-350 430Q-270 398-190 430T-30 430T130 430T290 430T450 430T610 430T770 430T930 430T1090 430T1250 430T1410 430" opacity="0.65"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-280 0" dur="5s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <path d="M0 444C164 412 280 448 430 418C621 380 753 429 921 390C1059 357 1127 371 1200 358V532H0Z" fill="#7ab56c"/>
+  <path d="M0 491C212 461 332 488 494 462C696 430 845 475 1016 438C1084 423 1149 416 1200 420V564H0Z" fill="#397c5d"/>
+
+  <!-- 公路与运动标线 -->
+  <rect y="530" width="1200" height="170" fill="#343c43"/>
+  <rect y="530" width="1200" height="13" fill="#f4bf46"/>
+  <rect y="543" width="1200" height="5" fill="#efe7cf" opacity="0.76"/>
+
+  <g fill="#f6f0d8" opacity="0.92">
+    <g>
+      <rect x="-180" y="645" width="120" height="16" rx="4"/>
+      <rect x="60" y="645" width="120" height="16" rx="4"/>
+      <rect x="300" y="645" width="120" height="16" rx="4"/>
+      <rect x="540" y="645" width="120" height="16" rx="4"/>
+      <rect x="780" y="645" width="120" height="16" rx="4"/>
+      <rect x="1020" y="645" width="120" height="16" rx="4"/>
+      <rect x="1260" y="645" width="120" height="16" rx="4"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-240 0" dur="1.25s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- 轮胎接地阴影 -->
+  <ellipse cx="393" cy="656" rx="132" ry="18" fill="#151a1e" opacity="0.32"/>
+  <ellipse cx="792" cy="656" rx="132" ry="18" fill="#151a1e" opacity="0.32"/>
+
+  <!-- 自行车与骑手做轻微起伏，周期与踩踏保持一致。 -->
+  <g id="riderAndBicycle">
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0;0 -3;0 0;0 -3;0 0"
+                      keyTimes="0;0.25;0.5;0.75;1"
+                      dur="1.2s" repeatCount="indefinite"/>
+
+    <!-- 两只车轮每转一周都带动辐条和反光片。 -->
+    <g transform="translate(393 535)">
+      <g>
+        <use xlink:href="#wheelGraphic"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2.15s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(792 535)">
+      <g>
+        <use xlink:href="#wheelGraphic"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2.15s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- 左腿位于远侧，先绘制，让车架和链条自然遮住它。 -->
+    <path d="M574 351Q543 400 525 445L538 535"
+          fill="none" stroke="#d98a42" stroke-width="25" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="d" dur="1.2s" repeatCount="indefinite"
+               keyTimes="0;0.25;0.5;0.75;1"
+               values="M574 351Q543 400 525 445L538 535;
+                       M574 351Q565 380 575 408L590 483;
+                       M574 351Q611 410 604 438L642 535;
+                       M574 351Q587 420 585 468L590 587;
+                       M574 351Q543 400 525 445L538 535"/>
+    </path>
+    <!-- 左踏板与左腿同属远侧图层。 -->
+    <g transform="translate(590 535)">
+      <g>
+        <path d="M0 0H-52" stroke="#15252e" stroke-width="9" stroke-linecap="round"/>
+        <rect x="-77" y="-8" width="35" height="16" rx="5" fill="#d9a83e" stroke="#533e28" stroke-width="3"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- 车架 -->
+    <g fill="none" stroke="url(#framePaint)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M393 535L548 374L590 535Z"/>
+      <path d="M548 374L708 394L590 535"/>
+      <path d="M708 394L792 535"/>
+    </g>
+    <path d="M711 394L730 333L758 318" fill="none" stroke="#155a76" stroke-width="14" stroke-linecap="round"/>
+    <path d="M724 319H801" fill="none" stroke="#24333d" stroke-width="10" stroke-linecap="round"/>
+    <path d="M721 319H745M780 319H804" fill="none" stroke="#0e171d" stroke-width="15" stroke-linecap="round"/>
+    <path d="M520 363H575" fill="none" stroke="#24333d" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- 链条用流动虚线表现持续传动。 -->
+    <path d="M393 526L588 517A19 19 0 0 1 588 553L393 544A10 10 0 0 1 393 526Z"
+          fill="none" stroke="#c8d0cc" stroke-width="4" stroke-dasharray="10 7" opacity="0.92">
+      <animate attributeName="stroke-dashoffset" from="34" to="0" dur="0.6s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="590" cy="535" r="25" fill="#21323c" stroke="#e4e8dd" stroke-width="5"/>
+    <circle cx="393" cy="535" r="13" fill="#21323c" stroke="#e4e8dd" stroke-width="4"/>
+
+    <!-- 右腿位于近侧，保持在车架前方并落在相反踏板上。 -->
+    <path d="M533 347Q568 410 601 438L642 535"
+          fill="none" stroke="#f3a24d" stroke-width="27" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="d" dur="1.2s" repeatCount="indefinite"
+               keyTimes="0;0.25;0.5;0.75;1"
+               values="M533 347Q568 410 601 438L642 535;
+                       M533 347Q559 420 574 468L590 587;
+                       M533 347Q515 400 523 445L538 535;
+                       M533 347Q542 380 570 408L590 483;
+                       M533 347Q568 410 601 438L642 535"/>
+    </path>
+
+    <!-- 右踏板单独绘制在前层，与远侧踏板始终相差半圈。 -->
+    <g transform="translate(590 535)">
+      <g>
+        <path d="M0 0H52" stroke="#15252e" stroke-width="9" stroke-linecap="round"/>
+        <rect x="42" y="-8" width="35" height="16" rx="5" fill="#f0c44d" stroke="#533e28" stroke-width="3"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- 鹈鹕身体 -->
+    <g id="pelicanBody">
+      <!-- 尾羽 -->
+      <path d="M465 306L402 327L457 344L416 369L495 365Z" fill="#e7e8dc" stroke="#273642" stroke-width="6" stroke-linejoin="round"/>
+
+      <!-- 远侧翅膀先绘制在身体后方，翼尖固定搭住右侧把手。 -->
+      <g id="farWing">
+        <path d="M575 245C622 248 667 271 707 299C731 315 757 320 785 315C795 314 802 321 799 330C797 338 787 342 778 337C747 340 716 333 690 323C644 307 603 287 568 267Z"
+              fill="#d6ddd8" stroke="#273642" stroke-width="7" stroke-linejoin="round">
+          <animate attributeName="d" dur="1.2s" repeatCount="indefinite"
+                   values="M575 245C622 248 667 271 707 299C731 315 757 320 785 315C795 314 802 321 799 330C797 338 787 342 778 337C747 340 716 333 690 323C644 307 603 287 568 267Z;
+                           M575 245C624 256 668 280 707 303C731 317 757 320 785 315C795 314 802 321 799 330C797 338 787 342 778 337C747 340 716 335 690 327C644 316 602 296 568 267Z;
+                           M575 245C622 248 667 271 707 299C731 315 757 320 785 315C795 314 802 321 799 330C797 338 787 342 778 337C747 340 716 333 690 323C644 307 603 287 568 267Z"/>
+        </path>
+        <path d="M601 269C648 291 690 313 749 326" fill="none" stroke="#aeb9b5" stroke-width="5" stroke-linecap="round"/>
+        <path d="M623 263C666 281 709 307 758 319" fill="none" stroke="#aeb9b5" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="785" cy="324" rx="20" ry="15" fill="#d6ddd8" stroke="#273642" stroke-width="6"/>
+        <path d="M780 318H801" fill="none" stroke="#0e171d" stroke-width="8" stroke-linecap="round"/>
+      </g>
+
+      <!-- 身体主体 -->
+      <path d="M482 205C420 247 430 350 496 381C559 411 643 379 665 313C688 247 638 190 570 181C537 176 505 185 482 205Z"
+            fill="#fffaf0" stroke="#273642" stroke-width="8"/>
+
+      <!-- 颈部连接到头部 -->
+      <path d="M600 303C617 260 608 221 637 187C662 158 703 142 739 158C762 168 774 188 766 207C730 207 704 224 688 251C672 278 680 319 646 341Z"
+            fill="#fffaf0" stroke="#273642" stroke-width="8" stroke-linejoin="round"/>
+
+      <!-- 运动围巾与飘动尾端 -->
+      <path d="M622 225C651 235 678 234 700 217L712 241C681 258 647 257 616 246Z" fill="#147f9e" stroke="#273642" stroke-width="5"/>
+      <g>
+        <path d="M629 244C589 255 555 248 524 265C552 274 577 282 607 279L624 258Z" fill="#19a6ab" stroke="#273642" stroke-width="5"/>
+        <path d="M621 253C587 275 567 291 535 298C564 305 595 299 619 281Z" fill="#f4bf46" stroke="#273642" stroke-width="5"/>
+        <animateTransform attributeName="transform" type="rotate"
+                          values="-2 629 244;5 629 244;-2 629 244"
+                          dur="0.9s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- 近侧翅膀覆盖在身体前方，翼尖固定搭住左侧把手。 -->
+      <g id="nearWing">
+        <path d="M486 246C522 247 550 270 580 290C622 319 675 332 738 318C750 315 759 322 758 332C758 342 748 348 737 346C672 356 610 344 560 320C520 301 491 278 486 246Z"
+              fill="#f0f0e4" stroke="#273642" stroke-width="8" stroke-linejoin="round">
+          <animate attributeName="d" dur="1.2s" repeatCount="indefinite"
+                   values="M486 246C522 247 550 270 580 290C622 319 675 332 738 318C750 315 759 322 758 332C758 342 748 348 737 346C672 356 610 344 560 320C520 301 491 278 486 246Z;
+                           M486 246C522 252 550 278 580 298C622 326 675 335 738 318C750 315 759 322 758 332C758 342 748 348 737 346C672 359 610 352 560 328C520 309 491 282 486 246Z;
+                           M486 246C522 247 550 270 580 290C622 319 675 332 738 318C750 315 759 322 758 332C758 342 748 348 737 346C672 356 610 344 560 320C520 301 491 278 486 246Z"/>
+        </path>
+        <path d="M506 278C555 309 615 335 698 339" fill="none" stroke="#b7beb9" stroke-width="6" stroke-linecap="round"/>
+        <path d="M523 265C568 297 631 325 711 330" fill="none" stroke="#b7beb9" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="741" cy="329" rx="21" ry="16" fill="#f0f0e4" stroke="#273642" stroke-width="7"/>
+        <path d="M725 321H746" fill="none" stroke="#0e171d" stroke-width="8" stroke-linecap="round"/>
+      </g>
+
+      <!-- 头部、头盔和长喙 -->
+      <g>
+        <ellipse cx="724" cy="176" rx="65" ry="53" fill="#fffaf0" stroke="#273642" stroke-width="8"/>
+
+        <path d="M670 164C679 109 747 88 793 126L779 153C744 129 708 130 680 171Z" fill="#167f9f" stroke="#273642" stroke-width="7"/>
+        <path d="M706 123C729 112 756 115 777 132" fill="none" stroke="#65cad1" stroke-width="8" stroke-linecap="round"/>
+        <path d="M786 143L805 151" stroke="#273642" stroke-width="9" stroke-linecap="round"/>
+
+        <circle cx="739" cy="164" r="11" fill="#17232b"/>
+        <circle cx="743" cy="160" r="3.5" fill="#ffffff"/>
+
+        <path d="M767 174C817 159 898 165 986 188C914 204 837 207 767 194Z"
+              fill="url(#beak)" stroke="#273642" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M771 194C824 200 913 201 978 188C944 235 864 257 790 224C779 219 774 207 771 194Z"
+              fill="url(#pouch)" stroke="#273642" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M968 186L987 188L970 198" fill="#de5136"/>
+
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 670 214;1.5 670 214;0 670 214;-1 670 214;0 670 214"
+                          keyTimes="0;0.25;0.5;0.75;1"
+                          dur="1.2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 前景小石块向左掠过，加强速度感。 -->
+  <g fill="#c9b98d" stroke="#5b675f" stroke-width="4">
+    <g>
+      <path d="M1260 594L1282 574L1311 584L1321 608L1274 612Z"/>
+      <path d="M1510 614L1528 598L1550 606L1557 625L1520 628Z"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1750 0" dur="4.8s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>
